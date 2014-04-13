@@ -24,16 +24,15 @@
   <div id="add_watchers_textinput_box">
     <div id="add_watchers_textinput">
       <select multiple id="add_watchers_select_box" data-placeholder="Start typing a name" >
-	<% available_watchers.each do |watcher| %>
-	<option value="<%= watcher.id %>"> <%= watcher %>  </option>
-	<% end %>
+        <% available_watchers.each do |watcher| %>
+         <option value="<%= watcher.id %>"> <%= watcher %>  </option>
+        <% end %>
       </select>
     </div>
     <script type="text/javascript"> AddWatchersTextInput.init() </script>
   </div>
 
   <div id="users_for_watcher">
-
     <%= principals_check_box_tags 'watcher[user_ids][]', (watched ? watched.addable_watcher_users : User.active.all(:limit => 100)) %>
   </div>
 
