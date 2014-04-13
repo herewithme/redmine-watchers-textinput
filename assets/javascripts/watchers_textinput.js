@@ -93,3 +93,20 @@ var AddWatchersTextInput = (function () {
         init: init
     }
 })();
+
+// Hook form submission for new issue : add assignment as watchers
+$(function () {
+    $(".edit_issue").submit(function( event ) {
+        var assigned_to_id = $("#issue_assigned_to_id").val();
+        $("#issue_watcher_user_ids_" + assigned_to_id).find('input').prop('checked', true);
+    });
+});
+
+// Hook form submission for update issue : add assignment as watchers
+$(function () {
+    $(".new_issue").submit(function( event ) {
+        var assigned_to_id = $("#issue_assigned_to_id").val();
+        var checkbox_parent = $("#users_for_watcher");
+        checkbox_parent.find('input[value=' + assigned_to_id + ']').prop('checked', true);
+    });
+});
