@@ -13,6 +13,7 @@ var WatchersTextInput = (function () {
 
             // Append current ticket author (current user) to watchers by default !
             select_box.select2("val", current_user_id);
+            sync_checkboxes();
             
             // Hook change on select2 for sync classic checkbox
             autocomplete_box.change(function (val) {
@@ -97,8 +98,8 @@ var AddWatchersTextInput = (function () {
 // Hook form submission for new issue : add assignment as watchers
 $(function () {
     $(".edit_issue").submit(function( event ) {
+        console.log(event);
         var assigned_to_id = $("#issue_assigned_to_id").val();
-        console.log(assigned_to_id);
         $("#issue_watcher_user_ids_" + assigned_to_id).find('input').prop('checked', true);
     });
 });
@@ -106,9 +107,9 @@ $(function () {
 // Hook form submission for update issue : add assignment as watchers
 $(function () {
     $(".new_issue").submit(function( event ) {
+        console.log(event);
         var assigned_to_id = $("#issue_assigned_to_id").val();
         var checkbox_parent = $("#users_for_watcher");
-        console.log(assigned_to_id);
         checkbox_parent.find('input[value=' + assigned_to_id + ']').prop('checked', true);
     });
 });
