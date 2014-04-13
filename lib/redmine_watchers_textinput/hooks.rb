@@ -1,4 +1,4 @@
-module WatchersTextInput
+module RedmineWatchersTextInput
   class Hooks < Redmine::Hook::ViewListener
     # This just renders the partial in
     # app/views/hooks/my_plugin/_view_issues_form_details_bottom.rhtml
@@ -13,7 +13,7 @@ module WatchersTextInput
     #def view_layouts_base_html_head(context={})
       #return "<script> alert('success')</script>"
     render_on(:view_layouts_base_html_head,
-              :partial => 'watchers_textinput/include_stylesheet')
+              :partial => 'redmine_watchers_textinput/include_stylesheet')
     #end
   end
 end

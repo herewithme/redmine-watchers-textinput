@@ -1,9 +1,9 @@
-redmine-watchers-textinput
+redmine watchers textinput
 ==========================
 
 ### Features 
 
-This is a plugin that replaces the checkboxes for adding watchers with a nice, tokenized text input with autocomplete. The actual Redmine plugin name is "watchers_textinput". The pages that are modified are the "Add new issue" page and "Edit watchers" (on existing issue) popup.
+This is a plugin that replaces the checkboxes for adding watchers with a nice, tokenized text input with autocomplete. The actual Redmine plugin name is "redmine_watchers_textinput". The pages that are modified are the "Add new issue" page and "Edit watchers" (on existing issue) popup.
 
 ### Compatibility
 
@@ -19,4 +19,4 @@ The actual autocomplete plugin used is Select2 (http://ivaynberg.github.io/selec
 
 ### How to install ?
 
-Just copy the "watchers_textinput" folder to your plugins directory and activate.
+Just copy the "redmine_watchers_textinput" folder to your plugins directory and activate.

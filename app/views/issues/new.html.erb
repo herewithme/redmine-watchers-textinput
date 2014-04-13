@@ -29,7 +29,7 @@
   <% if @issue.safe_attribute? 'watcher_user_ids' -%>
   <p id="watchers_form"><label><%= l(:label_issue_watchers) %></label>
     <span id="watchers_textinput">
-      <%= render :partial => "watchers_textinput/watchers_textinput", :locals=> {  } %>
+      <%= render :partial => "redmine_watchers_textinput/redmine_watchers_textinput", :locals=> {  } %>
     </span>
 
     <span id="watchers_inputs">
