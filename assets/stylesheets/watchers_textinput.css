@@ -4,7 +4,7 @@
 }
 span#watchers_inputs { display: none }
 #watchers_form > .search_for_watchers { display: none }
-#watchers_textinput { }
+#watchers_textinput { width:90%; }
 #watchers_select_box { width: 400px }
 /* For the post-issue-creation, add new watchers popup */
 #add_watchers_textinput_box { height: 260px }
