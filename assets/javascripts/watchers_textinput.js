@@ -12,7 +12,7 @@ var WatchersTextInput = (function () {
             var autocomplete_box = select_box.select2({'width': "350px"});
 
             // Append current ticket author (current user) to watchers by default !
-            select_box.select2("val", current_user_id); });
+            select_box.select2("val", current_user_id);
             
             // Hook change on select2 for sync classic checkbox
             autocomplete_box.change(function (val) {
@@ -70,7 +70,7 @@ var AddWatchersTextInput = (function () {
 
         // clear all boxes first
         checkboxes.prop('checked', false);
-        
+
         if (selected_userids && selected_userids.length) {
             for (var i = 0; i < selected_userids.length; i++) {
                 var userid = selected_userids[i];
