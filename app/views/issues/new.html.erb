@@ -57,6 +57,9 @@
 <% end %>
 
 <% content_for :header_tags do %>
-<script type="text/javascript"> WatchersTextInput.init(); </script>
+  <script type="text/javascript">
+    var current_user_id = <%= User.current.id %>;
+    WatchersTextInput.init();
+  </script>
 <% end %>
 

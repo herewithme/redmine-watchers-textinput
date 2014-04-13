@@ -27,7 +27,10 @@
         <% end %>
       </select>
     </div>
-    <script type="text/javascript"> AddWatchersTextInput.init(); </script>
+    <script type="text/javascript">
+      var current_user_id = <%= User.current.id %>;
+      AddWatchersTextInput.init();
+    </script>
   </div>
 
   <div id="users_for_watcher">
