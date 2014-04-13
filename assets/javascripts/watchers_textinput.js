@@ -8,7 +8,13 @@ var WatchersTextInput = (function () {
             checkboxes = $("#watchers_inputs input");
             select_box = $("#watchers_select_box");
 
+            // Init select2
             var autocomplete_box = select_box.select2({'width': "350px"});
+
+            // Append current ticket author (current user) to watchers by default !
+            select_box.select2("val", current_user_id); });
+            
+            // Hook change on select2 for sync classic checkbox
             autocomplete_box.change(function (val) {
                 sync_checkboxes();
             });
@@ -18,7 +24,9 @@ var WatchersTextInput = (function () {
     function sync_checkboxes() {
         var selected_userids = select_box.val();
 
-        checkboxes.prop('checked', false); // clear all boxes first
+        // clear all boxes first
+        checkboxes.prop('checked', false); 
+
         if (selected_userids && selected_userids.length) {
             for (var i = 0; i < selected_userids.length; i++) {
                 var userid = selected_userids[i];
@@ -44,19 +52,25 @@ var AddWatchersTextInput = (function () {
             checkboxes = $("#users_for_watcher input");
             select_box = $("#add_watchers_select_box");
             
+            // Init select2
             var autocomplete_box = select_box.select2({'width': "350px"});
+
+            // Hook change on select2 for sync classic checkbox
             autocomplete_box.change(function (val) {
                 sync_checkboxes();
             });
 
+            // Fix modal dialog
             fix_modal_overflow();
         });
     }
 
     function sync_checkboxes() {
         selected_userids = select_box.val();
-        //console.log(selected_userids);
-        checkboxes.prop('checked', false); // clear all boxes first
+
+        // clear all boxes first
+        checkboxes.prop('checked', false);
+        
         if (selected_userids && selected_userids.length) {
             for (var i = 0; i < selected_userids.length; i++) {
                 var userid = selected_userids[i];
