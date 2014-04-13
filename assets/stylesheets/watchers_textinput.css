@@ -9,7 +9,7 @@ span#watchers_inputs { display: none }
 /* For the post-issue-creation, add new watchers popup */
 #add_watchers_textinput_box { height: 260px }
 #add_watchers_select_box {
-    zwidth: 200px;
+    zwidth: 300px;
     zheight: 50px;
 }
 #users_for_watcher { display: none }
