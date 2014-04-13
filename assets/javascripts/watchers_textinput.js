@@ -98,6 +98,7 @@ var AddWatchersTextInput = (function () {
 $(function () {
     $(".edit_issue").submit(function( event ) {
         var assigned_to_id = $("#issue_assigned_to_id").val();
+        console.log(assigned_to_id);
         $("#issue_watcher_user_ids_" + assigned_to_id).find('input').prop('checked', true);
     });
 });
@@ -107,6 +108,7 @@ $(function () {
     $(".new_issue").submit(function( event ) {
         var assigned_to_id = $("#issue_assigned_to_id").val();
         var checkbox_parent = $("#users_for_watcher");
+        console.log(assigned_to_id);
         checkbox_parent.find('input[value=' + assigned_to_id + ']').prop('checked', true);
     });
 });
