@@ -35,7 +35,7 @@
     <% if @issue.safe_attribute? 'watcher_user_ids' -%>
       <p id="watchers_form"><label><%= l(:label_issue_watchers) %></label>
       <span id="watchers_textinput">
-        <%= #watchers_checkboxes(@issue, @available_watchers) %>
+        
         <%= render :partial => "redmine_watchers_textinput/redmine_watchers_textinput", :locals=> {  } %>
       </span>
       <span class="search_for_watchers">
