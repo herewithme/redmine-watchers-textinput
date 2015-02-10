@@ -59,7 +59,7 @@
     <%= robot_exclusion_tag %>
 <% end %>
 
-<% content_for :footer_tags do %>
+<% content_for :header_tags do %>
   <script type="text/javascript">
     var current_user_id = <%= User.current.id %>;
     WatchersTextInput.init();
